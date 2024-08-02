@@ -18,8 +18,8 @@ class JobListing extends Component<JobListingProps> {
     const { company, logo, title, salary, type, category, location, postedTime, tags } = this.props;
 
     return (
-      <div className="bg-white rounded-lg shadow-md p-6 mb-4">
-        <div className="flex items-center mb-4">
+      <div className="bg-gray-100 rounded-lg shadow-md p-6 mb-4">
+        <div className="flex items-center mb-4 hover:cursor-pointer">
           {/* <img src={logo} alt={company} className="w-12 h-12 mr-4" /> */}
           <div>
             <h2 className="text-xl font-semibold">{title}</h2>

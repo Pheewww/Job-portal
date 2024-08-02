@@ -48,14 +48,33 @@ export default function JobPostForm() {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg p-6 w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-4">Post a Job</h2>
+    <div className="fixed inset-0 bg-gray-300 bg-opacity-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-lg p-6 w-full max-w-xl">
+        <h2 className="text-2xl font-semibold mb-4 ml-36 font-sans">Hire your Dream Team</h2>
         {step === 1 && (
-          <div>
-            <button onClick={() => setStep(2)} className="bg-blue-500 text-white px-4 py-2 rounded">
-              Custom Option
-            </button>
+          <div className='flex flex-col items-center'>
+            <div className="mb-6">
+              <div className="flex items-center mb-2">
+                <span className="mr-2">📅</span>
+                <span><b>Top Devs</b> from Cohort Shown with <b>Badges</b></span>
+              </div>
+              <div className="flex items-center mb-2">
+                <span className="mr-2">📧</span>
+                <span>Select Email to <b>All Cohort Devs</b></span>
+              </div>
+              <div className="flex items-center">
+                <span className="mr-2">📣</span>
+                <span>Shared to 30k+ on social media</span>
+              </div>
+            </div>
+            <button onClick={() => setStep(2)} className="w-full px-6 py-6 mb-4 font-semibold text-xl rounded-md border-2 border-b-black shadow-lg hover:border-purple-400 flex justify-between items-center">
+  <span>Startups</span>
+  <span>$299</span>
+</button>
+            <button onClick={() => setStep(2)} className="w-full px-6 py-6 mb-4 font-semibold text-xl rounded-md border-2 border-b-black shadow-lg hover:border-purple-400 flex justify-between items-center">
+  <span>Enterprises</span>
+  <span>Custom</span>
+</button>
           </div>
         )}
         {step === 2 && (
